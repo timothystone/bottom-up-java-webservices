@@ -31,3 +31,20 @@ Each step will be as detailed as necessary to reflect the work performed on the 
 1. Lesson 108 - Test Using SOAPUI
 1. Lesson 109 - SOAPUI Assignment
 1. Lesson 110 - Section Summary
+
+## Lesson 102 - Payment Gateway Legacy Application
+
+Bharath reviews a Payment Gateway Application that a financial institution has published for retailers, e.g., Amazon. The gateway applies the standard n-tier model for web applications using the following:
+
+1. Web Layer
+1. Business Layer
+1. Data Access Layer
+
+This Payment Gateway as designed only supports Amazon. If the financial institution desired to support additional retailers, e.g., EBay, et al., the application would have to be rewritten for each retailer or stood up individually for each retailer.
+
+Exposing a "Payment Gateway Web Service" in the Business Layer via JAXB annotations addresses this brute force approach. The new web service will expose the business logic in a way that any retailer could use the payment gateway.
+
+**Lesson Notes**
+
+An introduction to traditional web service n-tier design with an overview of extracting a SOAP service from existing web services.
+
