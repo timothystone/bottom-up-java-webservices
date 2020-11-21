@@ -48,3 +48,50 @@ Exposing a "Payment Gateway Web Service" in the Business Layer via JAXB annotati
 
 An introduction to traditional web service n-tier design with an overview of extracting a SOAP service from existing web services.
 
+## Lesson 103 - Import the Legacy Project
+
+Bharath reviews the steps for developing a new SOAP web service and extending an existing service. The steps in this section will follow:
+
+1. Create the project
+1. Create the endpoint
+1. Mark with JAXB annotations
+1. Mark with JAX-WS annotations
+1. Create the config class
+1. Run the application
+
+The first two steps are provided by Bharath and Udemy as a downloadable resource. This Maven project will be imported into the IDE. This importing is IDE specific and fairly direct in most leveraging the underlying Maven architecture.
+
+**Importing the Project**
+
+As shown in the commit history, the project is imported and a number of immediate changes are made to support current Spring Boot and Java versions.
+
+*General Clean up*
+
+Remove `.DS_Store`. Provide `.gitignore` 
+
+*Java 15*
+
+The `<java.version>` property is updated to `15`. This necessitates updates to Spring Boot and Apache CXF versions.
+
+*Spring Boot*
+
+Updated to `2.3.5.RELEASE` and reflected in dependencies.
+
+*Apache CXF*
+
+As of November 2020, Apache CXF is at version `3.4.1`. This is reflected in a new property, `cxf.version` and applied to the project as needed.
+
+*Package Refactoring*
+
+For my personal mental context, the packages are refactored for my development domain, `com.anothercaffeinatedday`.
+
+*mvn clean package*
+
+Test the changes, performing a build and running the test suite provided in with Java 15.
+
+### Legacy Application Tour
+
+The lesson concludes with a tour of the legacy application. The commit history will show a number of refactorings performed, reflecting almost 20 years in Credit Card acquisition and servicing.
+
+ 
+

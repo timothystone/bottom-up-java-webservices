@@ -1,14 +1,14 @@
-package com.bharath.ws.soap.dto;
+package com.anothercaffeinatedday.ws.soap.dto;
 
 import java.util.Date;
 
 public class CreditCardInfo {
 
 	String cardNumber;
-	private Date expirtyDate;
+	private Date expirationDate;
 	String firstName;
 	String lastName;
-	String secCode;
+	String CVV2;
 	String Address;
 
 	public String getCardNumber() {
@@ -35,12 +35,12 @@ public class CreditCardInfo {
 		this.lastName = lastName;
 	}
 
-	public String getSecCode() {
-		return secCode;
+	public String getCVV2() {
+		return CVV2;
 	}
 
-	public void setSecCode(String secCode) {
-		this.secCode = secCode;
+	public void setCVV2(String CVV2) {
+		this.CVV2 = CVV2;
 	}
 
 	public String getAddress() {
@@ -51,12 +51,12 @@ public class CreditCardInfo {
 		Address = address;
 	}
 
-	public Date getExpirtyDate() {
-		return expirtyDate;
+	public Date getExpirationDate() {
+		return expirationDate;
 	}
 
-	public void setExpirtyDate(Date expirtyDate) {
-		this.expirtyDate = expirtyDate;
+	public void setExpirationDate(Date expirationDate) {
+		this.expirationDate = expirationDate;
 	}
 
 }

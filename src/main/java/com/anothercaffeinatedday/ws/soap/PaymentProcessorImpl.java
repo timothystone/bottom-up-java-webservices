@@ -1,7 +1,7 @@
-package com.bharath.ws.soap;
+package com.anothercaffeinatedday.ws.soap;
 
-import com.bharath.ws.soap.dto.PaymentProcessorRequest;
-import com.bharath.ws.soap.dto.PaymentProcessorResponse;
+import com.anothercaffeinatedday.ws.soap.dto.PaymentProcessorRequest;
+import com.anothercaffeinatedday.ws.soap.dto.PaymentProcessorResponse;
 
 public class PaymentProcessorImpl implements PaymentProcessor {
 

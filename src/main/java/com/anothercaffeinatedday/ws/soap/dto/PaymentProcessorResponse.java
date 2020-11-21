@@ -1,4 +1,4 @@
-package com.bharath.ws.soap.dto;
+package com.anothercaffeinatedday.ws.soap.dto;
 
 public class PaymentProcessorResponse {
 

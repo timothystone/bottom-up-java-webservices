@@ -1,4 +1,4 @@
-package com.bharath.ws.soap;
+package com.anothercaffeinatedday.ws.soap;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
