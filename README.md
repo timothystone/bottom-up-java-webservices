@@ -108,5 +108,58 @@ Test the changes, performing a build and running the test suite provided in with
 The lesson concludes with a tour of the legacy application. The commit history will show a number of refactorings 
 performed, reflecting almost 20 years in Credit Card acquisition and servicing.
 
- 
+## Lesson 104 - Mark the beans with JAXB Annotations
+
+Jumping right into the lesson, annotations to legacy Beans provide serialization hints to the Java XML Bindings. Apache 
+CXF will use these annotations to supply the types for the webservice.
+
+JAXB will perform, through Apache CXF, a significant amount of default behaviors via the annotations. The annotations,
+and some of their default behaviors will be noted below.
+
+### JAXB Annotations
+
+**`{@link javax.xml.bind.annotation.XmlType @XmlType}`**
+
+Marks the bean as a complex type for serialization by CXF. The annotation takes an *optional* property of `name`. If not
+provided, the type generated is of the classname annotated.
+
+**`{@link javax.xml.bind.annotation.XmlAccessorType @XmlAccessorType}`**
+
+Elements of the generated type will be, by default, determined by the members of the bean and the accessors and 
+mutators. Thus, depending on the documentation standards of the developer, team, or organization, `@XmlAccessorType` may
+or may not be required.
+
+If used, the annotation notes, how members of the bean will be annotated. The default behavior is `PUBLIC_MEMBER` and 
+documented as follows:
+
+> Every public **getter/setter pair** and every public **field** will be automatically bound to XML, unless annotated by 
+> `XmlTransient`. Fields or getter/setter pairs that are private, protected, or defaulted to package-only access are 
+> bound to XML only when they are explicitly annotated by the appropriate JAXB annotations.
+
+The lesson shows the annotation set to `@XmlAccessorType(XmlAccessType.FIELD)`. The documentation notes the following 
+behavior for `XmlAccessType.FIELD`:
+
+> Every non static, non transient **field** in a JAXB-bound class will be automatically bound to XML, unless annotated by 
+> `XmlTransient`. Getter/setter pairs are bound to XML only when they are explicitly annotated by some of the JAXB 
+> annotations.
+
+The **subtle** differences between the default `PUBLIC_MEMBER` and `FIELD` types should be noted and applied specifically 
+in each use-case.
+
+**`{@link javax.xml.bind.annotation.XmlElement @XmlElement}`**
+
+The PaymentProcessorRequest bean annotations conclude with using the `@XmlElement` annotation and showing its default
+`name` attribute. Each member is annotated and a `name` attribute set. The `name` attribute defaults the field name and 
+optional. Documentation standards may ask that this be explicitly set. YMMV.
+
+**`{@link javax.xml.bind.annotation.XmlAttribute @XmlAttribute}`**
+
+Only briefly mentioned in the lesson, is the `@XmlAttribute` annotation. It is possible to mark fields of a bean as 
+attributes to the complex types. 
+
+## Lesson Conclusion
+
+The lesson concludes with the remain beans of the sample project marked with JAXB annontations. CreditCardInfo and 
+PaymentProcessorResponse take advantage of default `PUBLIC_MEMBER` behaviors of the `@XmlAccessorType`.
+
 

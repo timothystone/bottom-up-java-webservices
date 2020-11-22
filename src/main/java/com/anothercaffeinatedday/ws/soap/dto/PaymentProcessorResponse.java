@@ -1,5 +1,8 @@
 package com.anothercaffeinatedday.ws.soap.dto;
 
+import javax.xml.bind.annotation.XmlType;
+
+@XmlType(name = "PaymentProcessorResponse")
 public class PaymentProcessorResponse {
 
 	private boolean result;

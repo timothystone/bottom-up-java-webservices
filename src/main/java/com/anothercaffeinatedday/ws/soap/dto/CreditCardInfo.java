@@ -1,7 +1,9 @@
 package com.anothercaffeinatedday.ws.soap.dto;
 
+import javax.xml.bind.annotation.XmlType;
 import java.util.Date;
 
+@XmlType(name = "CreditCardInfo")
 public class CreditCardInfo {
 
 	String cardNumber;
