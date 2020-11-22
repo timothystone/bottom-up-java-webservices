@@ -170,6 +170,26 @@ annotation performs the "heavy-lifting" removing the need to mark implementation
 
 **`{@link javax.ws.WebService @WebService}`**
 
+The only required annotation for creating the JAX-WS endpoint. The annotation takes an optional `name` attribute, 
+otherwises uses the class name, e.g., `PaymentProcessor`.
 
+**`{@link javax.jws.WebMethod @WebMethod}`**
 
+Developer, team, or organizational documentation standards may desire explicit use of this annotation on interface's 
+methods. YMMV.
 
+**`{@link javax.jws.WebParam @WebParam}`**
+
+Optional. See note on documentation standards. This annotation on the parameters passed to an interface's methods. The
+optional `name` attribute can provide a value differing from the interface itself.
+
+**`{@link javax.jws.WebResult @WebResult}`**
+
+Optional. See note on documentation standards. This annotation on the return type of an interface's methods. The
+optional `name` attribute can provide a value differing from the interface itself. In the lesson, 
+`PaymentProcessorResponse` is set to `response`, e.g., `@WebResult(name = "response")`
+
+### Lesson Conclusion
+
+Lesson 105 completes the annotations of the `PaymentProcessor` as the Web Service to the legacy monolith. The configuration
+and exposure of the endpoint is performed in the remaining lessons.
