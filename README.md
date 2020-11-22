@@ -266,5 +266,8 @@ The default `dateTime` element expects a specific format, e.g., `2020-11-22+05:0
   
 This lesson is a review of Lesson 108. While ostensibly an assignment, the work was completed in Lesson 108. Repeating
 the work of Lesson 108 reinforces the tooling available in SOAP UI. YMMV.
-  
- 
+
+## Lesson 110 - Section Summary
+
+A review of JAX-WS "Bottom-Up" Webservice development. Primarily a methodology for developing web services from legacy 
+applications, exposing monolithic application business logic to new use cases.
