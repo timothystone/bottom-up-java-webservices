@@ -129,8 +129,8 @@ Elements of the generated type will be, by default, determined by the members of
 mutators. Thus, depending on the documentation standards of the developer, team, or organization, `@XmlAccessorType` may
 or may not be required.
 
-If used, the annotation notes, how members of the bean will be annotated. The default behavior is `PUBLIC_MEMBER` and 
-documented as follows:
+If used, the annotation notes, how members of the bean will be annotated. The default behavior is 
+`XmlAccessType.PUBLIC_MEMBER` and documented as follows:
 
 > Every public **getter/setter pair** and every public **field** will be automatically bound to XML, unless annotated by 
 > `XmlTransient`. Fields or getter/setter pairs that are private, protected, or defaulted to package-only access are 
@@ -157,9 +157,19 @@ optional. Documentation standards may ask that this be explicitly set. YMMV.
 Only briefly mentioned in the lesson, is the `@XmlAttribute` annotation. It is possible to mark fields of a bean as 
 attributes to the complex types. 
 
-## Lesson Conclusion
+### Lesson Conclusion
 
-The lesson concludes with the remain beans of the sample project marked with JAXB annontations. CreditCardInfo and 
-PaymentProcessorResponse take advantage of default `PUBLIC_MEMBER` behaviors of the `@XmlAccessorType`.
+The lesson concludes with the remaining beans of the sample project marked with JAXB annotations. `CreditCardInfo` and 
+`PaymentProcessorResponse` take advantage of default `XmlAccessType.PUBLIC_MEMBER` behaviors of the `XmlAccessType` 
+enumeration.
+
+## Lesson 105 - Mark the endpoint with JAX-WS annotations 
+
+Exposing the webservice endpoints is enable by Apache CXF though the legacy application's interfaces. The `@WebService` 
+annotation performs the "heavy-lifting" removing the need to mark implementation classes.
+
+**`{@link javax.ws.WebService @WebService}`**
+
+
 
 
