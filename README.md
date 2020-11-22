@@ -193,3 +193,36 @@ optional `name` attribute can provide a value differing from the interface itsel
 
 Lesson 105 completes the annotations of the `PaymentProcessor` as the Web Service to the legacy monolith. The configuration
 and exposure of the endpoint is performed in the remaining lessons.
+
+## Lesson 106 - Publish the endpoint
+
+This lesson walks through the refactoring of an earlier lesson's `@Configuration` annotated class. 
+
+**Lesson Notes**
+
+The lesson uses IDE specific refactoring tools to copy a previous configuration class. The following notes will make an
+effort to meet the expectations of the lesson, relying less on the IDE.
+
+### Create Configuration Package
+
+`mkdir -p src/main/java/com/anothercaffeinatedday/ws/soap/config`
+
+### Copy an Existing Configuration Class
+
+```shell
+cd src/main/java/com/anothercaffeinatedday/ws/soap/config
+cp path/to/hellowebservice/src/main/java/package/ws/soap/config/WebServiceConfig.java
+```
+The resulting file, in this example copied from the Hello Web Service lesson, will need refactoring. The following 
+refactoring is performed and documented in the lesson:
+
+1. Verify `package`
+1. Remove `import`
+1. Set the implementation of the `EndpointImpl` to the `PaymentProcessorImpl`. Recall that CXF allows us to annotate the
+interface and not the implementation. CXF performs the heavy-lifting of making the implementation available to the 
+endpoint!
+1. Set the `publish` value to `paymentProcessor`
+1. Add the configuration class to source control, e.g., `git add --all`, and commit.
+
+
+ 
