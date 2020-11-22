@@ -224,5 +224,13 @@ endpoint!
 1. Set the `publish` value to `paymentProcessor`
 1. Add the configuration class to source control, e.g., `git add --all`, and commit.
 
+### Configure Application Context
 
+Update the `application.properties` and set a context path. The lesson uses `/javafirstws`.
+
+The property is Spring Boot version specific. `server.context.path` is deprecated in Spring Boot 2.x, replaced by 
+`server.servlet.context-path`.
+
+The `cxt.path` is set to override the default `/${server.servlet.context-path}/services` path provided by CXF, i.e., 
+`cxt.path=/` removes the `services` portion of the URL.
  
