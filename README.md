@@ -34,23 +34,29 @@ Each step will be as detailed as necessary to reflect the work performed on the 
 
 ## Lesson 102 - Payment Gateway Legacy Application
 
-Bharath reviews a Payment Gateway Application that a financial institution has published for retailers, e.g., Amazon. The gateway applies the standard n-tier model for web applications using the following:
+Bharath reviews a Payment Gateway Application that a financial institution has published for retailers, e.g., Amazon. 
+The gateway applies the standard n-tier model for web applications using the following:
 
 1. Web Layer
 1. Business Layer
 1. Data Access Layer
 
-This Payment Gateway as designed only supports Amazon. If the financial institution desired to support additional retailers, e.g., EBay, et al., the application would have to be rewritten for each retailer or stood up individually for each retailer.
+This Payment Gateway as designed only supports Amazon. If the financial institution desired to support additional 
+retailers, e.g., EBay, et al., the application would have to be rewritten for each retailer or stood up individually for
+each retailer.
 
-Exposing a "Payment Gateway Web Service" in the Business Layer via JAXB annotations addresses this brute force approach. The new web service will expose the business logic in a way that any retailer could use the payment gateway.
+Exposing a "Payment Gateway Web Service" in the Business Layer via JAXB annotations addresses this brute force approach.
+The new web service will expose the business logic in a way that any retailer could use the payment gateway.
 
 **Lesson Notes**
 
-An introduction to traditional web service n-tier design with an overview of extracting a SOAP service from existing web services.
+An introduction to traditional web service n-tier design with an overview of extracting a SOAP service from existing web
+services.
 
 ## Lesson 103 - Import the Legacy Project
 
-Bharath reviews the steps for developing a new SOAP web service and extending an existing service. The steps in this section will follow:
+Bharath reviews the steps for developing a new SOAP web service and extending an existing service. The steps in this 
+section will follow:
 
 1. Create the project
 1. Create the endpoint
@@ -59,11 +65,18 @@ Bharath reviews the steps for developing a new SOAP web service and extending an
 1. Create the config class
 1. Run the application
 
-The first two steps are provided by Bharath and Udemy as a downloadable resource. This Maven project will be imported into the IDE. This importing is IDE specific and fairly direct in most leveraging the underlying Maven architecture.
+The first two steps are provided by Bharath and Udemy as a downloadable resource. This Maven project will be imported 
+into the IDE. This importing is IDE specific and fairly direct in most leveraging the underlying Maven architecture.
+
+**Lesson Note**
+
+Importing the project skips Step 1 and 2, Create the project and Create the endpoint. The project is imported below and 
+the remaining steps performed in the following lessons.
 
 **Importing the Project**
 
-As shown in the commit history, the project is imported and a number of immediate changes are made to support current Spring Boot and Java versions.
+As shown in the commit history, the sample project provided in the Udemy course is imported. A number of immediate 
+changes supporting current Spring Boot and Java versions are made as follows:
 
 *General Clean up*
 
@@ -79,7 +92,8 @@ Updated to `2.3.5.RELEASE` and reflected in dependencies.
 
 *Apache CXF*
 
-As of November 2020, Apache CXF is at version `3.4.1`. This is reflected in a new property, `cxf.version` and applied to the project as needed.
+As of November 2020, Apache CXF is at version `3.4.1`. This is reflected in a new property, `cxf.version` and applied to
+the project as needed.
 
 *Package Refactoring*
 
@@ -91,7 +105,8 @@ Test the changes, performing a build and running the test suite provided in with
 
 ### Legacy Application Tour
 
-The lesson concludes with a tour of the legacy application. The commit history will show a number of refactorings performed, reflecting almost 20 years in Credit Card acquisition and servicing.
+The lesson concludes with a tour of the legacy application. The commit history will show a number of refactorings 
+performed, reflecting almost 20 years in Credit Card acquisition and servicing.
 
  
 
